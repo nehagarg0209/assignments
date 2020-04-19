@@ -1,4 +1,7 @@
-
+/**
+* function that counts the maximum number of valid paranthesis sequence in a given expression
+* string - given expression by user
+*/
 function countValidParanthesis(string) {
 
 	let stack = [];
