@@ -8,12 +8,15 @@ function Mario() {
 	this.direction = "Right";
 	this.totalMoves = 0;
 
+	let mario_img = document.getElementById("mario");
+
+	// draw the image of mario
 	this.draw = () => {
-		ctx.fillStyle = "#FFFFFF";
-		ctx.fillRect(this.x, this.y, scale, scale);
+		ctx.drawImage(mario_img, this.x, this.y, 30, 30);
 		this.totalMoves ++ ;
 	}
 
+	// update the mario positon
 	this.update = () => {
 		
 		this.x += this.xSpeed;
@@ -44,6 +47,7 @@ function Mario() {
 		}
 	}
 
+	// change the direction of mario on key press events
 	this.changeDirection = (direction) => {
 
 		this.direction = direction;
@@ -71,6 +75,7 @@ function Mario() {
 		}
 	}
 
+	// checks and return the index of mushroom that is eaten by mario
 	this.eat = (allMushrooms) => {
 	
 		for (let i = 0; i < allMushrooms.length ; i++) {
@@ -80,8 +85,9 @@ function Mario() {
 		return -1 ;
 	}
 
+	// returns the total movements done by mario
 	this.getTotalMoves = () => {
 		return this.totalMoves ;
 	}
-}
 
+}

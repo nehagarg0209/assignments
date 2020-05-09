@@ -1,5 +1,7 @@
 function Mushroom() {
 
+	let mushroom_img = document.getElementById("mushroom");
+
 	this.x ;
 	this.y ;
 
@@ -9,7 +11,6 @@ function Mushroom() {
 	}
 
 	this.draw = () => {
-		ctx.fillStyle = "#f1560c";
-		ctx.fillRect(this.x, this.y, scale, scale);
+		ctx.drawImage(mushroom_img, this.x, this.y, 30, 30);
 	}
 }
